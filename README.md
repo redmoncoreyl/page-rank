@@ -44,16 +44,16 @@ There are four steps to the program:
 3. Index pages - preprocess word index
 4. Get input - continuously prompt for search word input
 
-### Read pages
+### 1. Read pages
 Because external links need to be ignored, a first pass of the file gets the list of URLs in the network. Each `NEWPAGE` URL is considered a node in the network.
 
 After getting the list of URLs in the network, a second pass gets the list of links and words on each page. The links are considered arcs in the network.
 
-### Rank pages
+### 2. Rank pages
 The program uses the ubiquitous [PageRank](https://wikipedia.org/wiki/PageRank) algorithm to rank the nodes in the network. The damping factor *d = 0.9*.
 
-### Index pages
+### 3. Index pages
 The program preprocess a word index. The index is a hash table which maps words to a list of pages which contain that word. The domain of the hash table is the union of all words which appear on any page in the webpage data file.
 
-### Get input
+### 4. Get input
 The program prompts the user for a search word input. The search engine then returns an importance-ordered list of webpages containing that word. Then input is requested again. Use your command-line termination shortcut to terminate.
