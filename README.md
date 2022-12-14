@@ -50,10 +50,10 @@ Because external links need to be ignored, a first pass of the file gets the lis
 After getting the list of URLs in the network, a second pass gets the list of links and words on each page. The links are considered arcs in the network.
 
 ### 2. Rank pages
-The program uses the ubiquitous [PageRank](https://wikipedia.org/wiki/PageRank) algorithm to rank the nodes in the network. The damping factor *d = 0.9*.
+The program uses the ubiquitous [PageRank](https://wikipedia.org/wiki/PageRank) algorithm to rank the nodes in the network. The damping factor is *d = 0.9*.
 
 ### 3. Index pages
-The program preprocess a word index. The index is a hash table which maps words to a list of pages which contain that word. The domain of the hash table is the union of all words which appear on any page in the webpage data file.
+The program preprocess a word index. The index is a hash table which maps a word to a list of pages which contain that word. The domain of the hash table is the union of all words which appear on any page in the webpage data file.
 
 ### 4. Get input
-The program prompts the user for a search word input. The search engine then returns an importance-ordered list of webpages containing that word. Then input is requested again. Use your command-line termination shortcut to terminate.
+The program prompts the user for a search word input. The search engine then returns an importance-ordered list of webpages containing that word. Then input is repeatedly requested again. Use your command-line termination shortcut (such as `Ctrl + C`) to terminate.
